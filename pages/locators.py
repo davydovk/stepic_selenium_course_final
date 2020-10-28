@@ -11,8 +11,13 @@ class LoginPageLocators():
 
 
 class ProductPageLocators():
-    ADD_TO_BASKET_BUTTON = (By.ID, 'add_to_basket_form')
-    PRODUCT_PRICE = (By.XPATH, '/html/body/div[2]/div/div[2]/div[2]/article/table/tbody/tr[4]/td')
-    PRODUCT_NAME = (By.XPATH, '/html/body/div[2]/div/div[2]/div[2]/article/div[1]/div[2]/h1')
-    ADD_TO_BASKET_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
-    BASKET_PRICE = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
+    ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, '#add_to_basket_form')
+    PRODUCT_PRICE = (By.CSS_SELECTOR, 'p.price_color')
+    PRODUCT_NAME = (By.CSS_SELECTOR, 'div.col-sm-6.product_main > h1')
+    ADD_TO_BASKET_MESSAGE = (By.CSS_SELECTOR, 'div.alertinner > strong')
+    BASKET_PRICE = (By.CSS_SELECTOR, 'div.alert div p strong')
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
